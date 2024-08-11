@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../api/axiosConfig";
+import { Link } from "react-router-dom";
 
 const AddMaistro = () => {
   const [maistro, setMaistro] = useState({
@@ -69,100 +70,103 @@ const AddMaistro = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="id">id:</label>
-      <br />
-      <input
-        type="number"
-        name="id"
-        value={maistro.id}
-        onChange={handleChange}
-        placeholder="id"
-      />
-      <br />
-      <label htmlFor="name">Name:</label>
-      <br />
-      <input
-        type="text"
-        name="name"
-        value={maistro.name}
-        onChange={handleChange}
-        placeholder="Name"
-      />
-      <br />
-      <label htmlFor="phone">phone:</label>
-      <br />
-      <input
-        type="text"
-        name="phone"
-        value={maistro.phone}
-        onChange={handleChange}
-        placeholder="Phone"
-      />
-      <br />
-      <label htmlFor="email">email:</label>
-      <br />
-      <input
-        type="email"
-        name="e_mail"
-        value={maistro.e_mail}
-        onChange={handleChange}
-        placeholder="Email"
-      />
-      <br />
-      <label htmlFor="state">state:</label>
-      <br />
-      <input
-        type="text"
-        name="state"
-        value={maistro.state}
-        onChange={handleChange}
-        placeholder="State"
-      />
-      <br />
-      <label htmlFor="city">city:</label>
-      <br />
-      <input
-        type="text"
-        name="city"
-        value={maistro.city}
-        onChange={handleChange}
-        placeholder="City"
-      />
-      <br />
-      <label htmlFor="rating">rating:</label>
-      <br />
-      <input
-        type="number"
-        name="rating"
-        value={maistro.rating}
-        onChange={handleChange}
-        placeholder="Rating"
-      />
-      <br />
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="id">id:</label>
+        <br />
+        <input
+          type="number"
+          name="id"
+          value={maistro.id}
+          onChange={handleChange}
+          placeholder="id"
+        />
+        <br />
+        <label htmlFor="name">Name:</label>
+        <br />
+        <input
+          type="text"
+          name="name"
+          value={maistro.name}
+          onChange={handleChange}
+          placeholder="Name"
+        />
+        <br />
+        <label htmlFor="phone">phone:</label>
+        <br />
+        <input
+          type="text"
+          name="phone"
+          value={maistro.phone}
+          onChange={handleChange}
+          placeholder="Phone"
+        />
+        <br />
+        <label htmlFor="email">email:</label>
+        <br />
+        <input
+          type="email"
+          name="e_mail"
+          value={maistro.e_mail}
+          onChange={handleChange}
+          placeholder="Email"
+        />
+        <br />
+        <label htmlFor="state">state:</label>
+        <br />
+        <input
+          type="text"
+          name="state"
+          value={maistro.state}
+          onChange={handleChange}
+          placeholder="State"
+        />
+        <br />
+        <label htmlFor="city">city:</label>
+        <br />
+        <input
+          type="text"
+          name="city"
+          value={maistro.city}
+          onChange={handleChange}
+          placeholder="City"
+        />
+        <br />
+        <label htmlFor="rating">rating:</label>
+        <br />
+        <input
+          type="number"
+          name="rating"
+          value={maistro.rating}
+          onChange={handleChange}
+          placeholder="Rating"
+        />
+        <br />
 
-      <label htmlFor="category">Category:</label>
-      <select
-        multiple={true}
-        id="category"
-        name="category"
-        value={maistro.category}
-        onChange={handleCategoryChange}
-      >
-        {categories.map((category, index) => (
-          <option
-            key={index}
-            value={category}
-            className={activeIndex === index ? "active" : ""}
-          >
-            {category}
-          </option>
-        ))}
-      </select>
-      <br />
+        <label htmlFor="category">Category:</label>
+        <select
+          multiple={true}
+          id="category"
+          name="category"
+          value={maistro.category}
+          onChange={handleCategoryChange}
+        >
+          {categories.map((category, index) => (
+            <option
+              key={index}
+              value={category}
+              className={activeIndex === index ? "active" : ""}
+            >
+              {category}
+            </option>
+          ))}
+        </select>
+        <br />
 
-      <button type="submit">Add Maistro</button>
-    </form>
+        <button type="submit">Add Maistro</button>
+      </form>
+      <Link to="/maistroz">Cancel</Link>
+    </div>
   );
 };
 
