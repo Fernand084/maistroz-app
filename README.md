@@ -1,31 +1,42 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 # maistroz-app
+
+**maistroz-app** es una aplicación simple creada con **React** y **Vite** que utiliza **Axios** para obtener datos de la API de Spring Boot, _Maistroz-api_.
+
+## Descripción
+
+Este proyecto tiene como objetivo principal aprender y explorar las características de React, tales como:
+
+- Componentes funcionales y hooks.
+- Manejo del estado con `useState`.
+- Efectos secundarios con `useEffect`.
+- Realización de peticiones HTTP utilizando Axios.
+- Manejo de rutas con React Router.
+
+La aplicación interactúa con la API _Maistroz-api_ para mostrar un directorio de proveedores de servicios categorizados por:
+
+- ID
+- Nombre
+- Teléfono
+- E-mail
+- Estado
+- Ciudad
+- Calificación (Rating)
+- Lista de categorías de servicio
+
+## Propósito
+
+El propósito de este proyecto es adquirir experiencia práctica en el desarrollo de aplicaciones web con React, así como profundizar en la integración de front-end y back-end mediante la comunicación con APIs RESTful.
+
+## Tecnologías Utilizadas
+
+- React
+- Vite
+- Axios
+- React Router
+
+## Instrucciones de Uso
+
+1. Clona el repositorio:
+   git clone https://github.com/tu_usuario/maistroz-app.git
+2. npm install
+3. npm run dev
